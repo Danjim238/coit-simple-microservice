@@ -9,15 +9,15 @@ pipeline {
         }
         stage('docker-build') {
             steps {
-               sh 'cd coit-backend1 && docker build -t coit-backend1-92234832:v2 .'
+               sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
                sh 'docker images' 
             }
         }
-        //stage('docker-push') {
-           // steps {
-                //sh 'echo "pushing docker image"'
-                //sh 'docker push amol1996/coit-backend1-92234832:v2'
-          //  }
-    //}
+        stage('docker-push') {
+           steps {
+                sh 'echo "pushing docker image"'
+                sh 'docker push danushvithiyarth/coit-backend1:v2'
+            }
+    }
 }
 }
