@@ -9,7 +9,7 @@ pipeline {
         }
         stage('docker-build') {
             steps {
-                 sh 'echo "Docker build"'
+                 //sh 'echo "Docker build"'
                //sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
                //sh 'docker images' 
             }
