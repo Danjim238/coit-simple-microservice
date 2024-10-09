@@ -15,7 +15,7 @@ pipeline {
         }
         stage('docker-push') {
            steps {
-              withCredentials([usernamePassword(credentialsId: '02fb8a91-02e0-4db2-9cec-7f24aef61258', usernameVariable: 'danushvithiyarth', passwordVariable: 'fodjo1-qatgoP-fixsyq')]) {
+              withCredentials([usernamePassword(credentialsId: '9744ba9d-bc79-4d74-9699-adb4045f16c5', usernameVariable: 'danushvithiyarth', passwordVariable: 'fodjo1-qatgoP-fixsyq')]) {
                     sh 'echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USER --password-stdin'
                     sh 'docker push danushvithiyarth/coit-backend1:v2'
            }
