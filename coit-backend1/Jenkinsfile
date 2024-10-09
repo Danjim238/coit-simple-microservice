@@ -16,7 +16,7 @@ pipeline {
         stage('docker-push') {
            steps {
                sh 'docker push danushvithiyarth/coit-backend1:v2'
-            }
+           }
     }
 }
 }
