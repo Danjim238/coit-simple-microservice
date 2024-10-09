@@ -9,16 +9,13 @@ pipeline {
         }
         stage('docker-build') {
             steps {
-                 sh 'echo "Docker build"'
-               //sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
-               //sh 'docker images' 
+               sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
+               sh 'docker images' 
             }
         }
         stage('docker-push') {
            steps {
-               sh 'echo "Docker push"'
-                //sh 'echo "pushing docker image"'
-                //sh 'docker push danushvithiyarth/coit-backend1:v2'
+               sh 'docker push danushvithiyarth/coit-backend1:v2'
             }
     }
 }
