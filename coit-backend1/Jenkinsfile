@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 first()
-                sh 'echo "build"'
+                //sh 'echo "build"'
                //sh 'cd coit-backend1 && mvn install'
             }
         }
