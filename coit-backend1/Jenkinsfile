@@ -4,20 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               sh 'cd coit-backend1 && mvn install'
+                sh 'echo "build"'
+               //sh 'cd coit-backend1 && mvn install'
             }
         }
         stage('docker-build') {
             steps {
-               sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
-               sh 'docker images' 
+                sh 'echo "docker build"'
+              // sh 'cd coit-backend1 && docker build -t danushvithiyarth/coit-backend1:v2 .'
+              // sh 'docker images' 
             }
         }
         stage('docker-push') {
            steps {
-                    sh 'docker push danushvithiyarth/coit-backend1:v2'
+               sh 'echo "docker push"'
+                   // sh 'docker push danushvithiyarth/coit-backend1:v2'
            }
     }
 }
 }
-
